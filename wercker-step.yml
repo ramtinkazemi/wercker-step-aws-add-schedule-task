@@ -1,5 +1,5 @@
-name: aws-ecs-scheduled-task
-version: 0.0.4
+name: aws-ecs-add-scheduled-task
+version: 0.0.1
 description: Deploy Scheduled Task to AWS ECS
 keywords:
   - aws
@@ -18,6 +18,9 @@ properties:
     required: false
 
   # Step 2: Defining event rule
+  app-name:
+    type: string
+    required: true 
   schedule-rule-name:
     type: string
     required: true
