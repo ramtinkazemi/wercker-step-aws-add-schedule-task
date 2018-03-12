@@ -63,7 +63,7 @@ cat $TARGET_FILE
 warn "Put rule : $STEP_SCHEDULE_RULE_NAME"
 aws events put-rule \
     --profile ${STEP_AWS_PROFILE} \
-    --name "$APP_NAME-$STEP_SCHEDULE_RULE_NAME" \
+    --name "$STEP_APP_NAME-$STEP_SCHEDULE_RULE_NAME" \
     --schedule-expression "${STEP_SCHEDULE_EXPRESSION}" \
     --state ${STEP_SCHEDULE_STATE} \
     --description  "${STEP_SCHEDULE_DESCRIPTION}"
