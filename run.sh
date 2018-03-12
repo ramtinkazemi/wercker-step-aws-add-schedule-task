@@ -18,7 +18,7 @@ type_exists() {
   return 1
 }
 
-STEP_PREFIX="WERCKER_AWS_ECS_SCHEDULED_TASK"
+STEP_PREFIX="WERCKER_AWS_ECS_ADD_SCHEDULED_TASK"
 step_var() {
   echo $(tmp=${STEP_PREFIX}_$1 && echo ${!tmp}) 
 }
