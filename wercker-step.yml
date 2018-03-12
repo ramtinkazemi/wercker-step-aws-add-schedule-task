@@ -1,0 +1,49 @@
+name: aws-ecs-scheduled-task
+version: 0.0.4
+description: Deploy Scheduled Task to AWS ECS
+keywords:
+  - aws
+  - ecs
+  - scheduled task
+properties:
+  # Step 1: Configuring AWS
+  key:
+    type: string
+    required: true
+  secret:
+    type: string
+    required: true
+  region:
+    type: string
+    required: false
+
+  # Step 2: Defining event rule
+  schedule-rule-name:
+    type: string
+    required: true
+  schedule-expression:
+    type: string
+    required: true
+  schedule-state:
+    type: string
+    required: true
+  schedule-description:
+    type: string
+    required: false
+
+  # Step 2: Defining target
+  cluster-name:
+    type: string
+    required: true
+  task-count:
+    type: string
+    required: true  
+  task-definition-name:
+    type: string
+    required: true
+  target-id:
+    type: string
+    required: true      
+  target-template:
+    type: string
+    required: true
