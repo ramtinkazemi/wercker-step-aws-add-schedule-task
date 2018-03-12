@@ -1,5 +1,5 @@
 name: aws-ecs-add-scheduled-task
-version: 0.0.2
+version: 0.0.3
 description: Deploy Scheduled Task to AWS ECS
 keywords:
   - aws
