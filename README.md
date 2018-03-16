@@ -1,5 +1,5 @@
 # step-aws-ecs-scheduled-task
-Wercker Step to register task definition in aws ecs
+Wercker Step to register task definition in aws ecs, the schedule task name will be "$STEP_APP_NAME-$STEP_SCHEDULE_RULE_NAME"
 
 
 # Example
