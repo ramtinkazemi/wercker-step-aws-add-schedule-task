@@ -8,19 +8,20 @@ Wercker Step to register task definition in aws ecs
 ecs_task_target.json.template
 ```
 {
-    "Rule": "${STEP_SCHEDULE_RULE_NAME}",
-    "Targets": [
-        {
-            "Id": "${STEP_TARGET_ID}",
-            "Arn": "${CLUSTER_ARN}",
-            "RoleArn": "${ROLE_ARN}",
-            "EcsParameters": {
-                "TaskDefinitionArn": "${TASK_DEFINITION_ARN}",
-                "TaskCount": ${STEP_TASK_COUNT}
-            }
-        }
-    ]
+  "Rule": "${STEP_APP_NAME}-${STEP_SCHEDULE_RULE_NAME}",
+  "Targets": [
+    {
+      "Id": "${STEP_TARGET_ID}",
+      "Arn": "${CLUSTER_ARN}",
+      "RoleArn": "${ROLE_ARN}",
+      "EcsParameters": {
+        "TaskDefinitionArn": "${TASK_DEFINITION_ARN}",
+        "TaskCount": ${STEP_TASK_COUNT}
+  }
+  }
+  ]
 }
+
 ```
 
 
@@ -29,7 +30,7 @@ ecs_task_target.json.template
 ```
 deploy:
     steps:
-    - steven-rho/aws-ecs-scheduled-task:
+    - ramtinkazemi/aws-ecs-add-scheduled-task@0.0.x:
         name: sample scheduled task
         key: $STEP_AWS_ACCESS_KEY_ID
         secret: $STEP_AWS_SECRET_ACCESS_KEY
