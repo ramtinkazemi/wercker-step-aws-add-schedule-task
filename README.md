@@ -30,7 +30,7 @@ ecs_task_target.json.template
 ```
 deploy:
     steps:
-    - ramtinkazemi/aws-ecs-add-scheduled-task@0.0.7:
+    - cashrewards/aws-ecs-add-scheduled-task@0.0.8:
         name: sample scheduled task
         key: $STEP_AWS_ACCESS_KEY_ID
         secret: $STEP_AWS_SECRET_ACCESS_KEY
